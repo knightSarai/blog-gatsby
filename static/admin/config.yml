@@ -6,8 +6,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - label: 'Blog' 
+    name: 'blog'
     folder: 'content/blog'
     create: true
     slug: 'index'
@@ -21,17 +21,17 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: "setting"
-    label: "Setting"
+  - label: "Setting"
+    name: "setting"
     files:
-      label: "Contact Info"
-      name: contact_info
-      file: site/settings/contact_info.json
+    - label: "Contact Info"
+      name: "contact_info"
+      file: "site/settings/contact_info.json"
       fields:
-      - { label: 'Phone', name: 'phone', widget: 'string', required: false}
-      - label: 'Addres'
-        name: 'addres'
-        widget: 'object'
-        fields:
-          - { label: 'Street', name: 'street', widget: 'string'}
-          - { label: 'City', name: 'city', widget: 'string'}
+        - {label: Title, name: title, widget: string}
+        - label: Locations
+          name: locations
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Address, name: address, widget: string}
