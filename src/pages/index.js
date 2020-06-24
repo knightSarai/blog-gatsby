@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 import contactInfo from '../../site/settings/contact_info.json'
+import customers from '../../site/settings/customers.json'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -17,6 +18,8 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       {contactInfo.title}
+      {customers.name}
+      {customers.phone}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (

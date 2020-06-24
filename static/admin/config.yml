@@ -35,3 +35,9 @@ collections:
           fields:
             - {label: Name, name: name, widget: string}
             - {label: Address, name: address, widget: string}
+        - label: "Customers"
+          name: "customers"
+          file: "site/settings/customers.json"
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Phone, name: phone, widget: string}
